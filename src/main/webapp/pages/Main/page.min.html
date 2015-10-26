@@ -25,7 +25,7 @@ Application.$controller("MainPageController", ["$scope", function ($scope) {
 
 </script>
 <script id="Main.variables.json">
-var _MainPage_Variables_ ={};
+var _MainPage_Variables_ ={}
 </script>
 <script id="Main.html" type="text/ng-template">
 <wm-page data-ng-controller="MainPageController" name="page1">
@@ -35,18 +35,19 @@ var _MainPage_Variables_ ={};
         <wm-left-panel content="leftnav" columnwidth="2" name="left_panel1"></wm-left-panel>
         <wm-page-content columnwidth="10" name="page_content1">
             <wm-composite name="composite1">
-                <wm-label class="col-md-3" name="label1"></wm-label>
+                <wm-label class="col-md-3" name="label1" caption="Origin"></wm-label>
                 <wm-container class="col-md-9" name="container1">
                     <wm-text name="text1"></wm-text>
                 </wm-container>
             </wm-composite>
             <wm-composite name="composite2">
-                <wm-label class="col-md-3" name="label2"></wm-label>
+                <wm-label class="col-md-3" name="label2" caption="Destination"></wm-label>
                 <wm-container class="col-md-9" name="container2">
                     <wm-text name="text2"></wm-text>
                 </wm-container>
             </wm-composite>
-            <wm-button class="btn-default" caption="Button" type="button" name="button1"></wm-button>
+            <wm-button class="btn-default" caption="Click" type="button" name="button1" on-click="GoogleapisInvoke"></wm-button>
+            <wm-label name="label3" caption="bind:Variables.GoogleapisInvoke.dataSet.route.leg.distance.text"></wm-label>
         </wm-page-content>
     </wm-content>
     <wm-footer content="footer" name="footer1"></wm-footer>
